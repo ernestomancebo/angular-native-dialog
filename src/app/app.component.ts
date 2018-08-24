@@ -34,6 +34,7 @@ export class AppComponent implements OnDestroy {
     this.dialogContainerRef = this.containerComponent.createComponent(factory);
 
     this.dialogContainerRef.instance.notification = notification;
+    // Subscribes to the close EventEmitter and listens to the value returned by the dialog
     this.dialogContainerRef.instance.close.subscribe(value => {
       this.dialogResult = value.returnValue;
     });
