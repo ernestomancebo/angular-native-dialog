@@ -1,0 +1,8 @@
+<dialog class="my-dialog" (close)="handleClose($event)" #leDialog>
+  <h3>{{notification.title}}</h3>
+  <p>{{notification.message}}</p>
+  <div class="inline-components">
+    <button class="btn ok-modal-btn" (click)="okClicked()">ok</button>
+    <button class="btn cancel-modal-btn" (click)="cancelClicked()">cancel</button>
+  </div>
+</dialog>
